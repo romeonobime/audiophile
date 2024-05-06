@@ -1,0 +1,27 @@
+{% props
+    color = 'darkest',
+    maxWidth = 'medium',
+    opacity = 'half',
+%}
+
+{% set baseCardDescription = cva({
+    base: 'body',
+    variants: {
+        color: {
+            lightest: 'text-neutral-lightest',
+            darkest: 'text-neutral-darkest'
+        },
+        maxWidth: {
+            small: 'w-[350px]',
+            medium: 'w-[445px]',
+        },
+        opacity: {
+            half: 'opacity-50',
+            high: 'opacity-75'
+        }
+    }
+}) %}
+
+<p class="{{ baseCardDescription.apply({color, maxWidth, opacity}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</p>
