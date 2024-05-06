@@ -1,0 +1,20 @@
+{% props
+    color = 'primary',
+    size = 'small',
+%}
+
+{% set baseButton = cva({
+    base: 'subtitle',
+    variants: {
+        color: {
+            primary: 'text-neutral-lightest bg-primary hover:bg-primary-light',
+        },
+        size: {
+            small: 'h-12 w-40',
+        }
+    }
+}) %}
+
+<button class="{{ baseButton.apply({color, size}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</button>
