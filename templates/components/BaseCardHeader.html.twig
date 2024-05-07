@@ -1,0 +1,17 @@
+{% props
+    gap = 'mediumUntilSm',
+%}
+
+{% set BaseCardHeader = cva({
+    base: 'flex flex-col',
+    variants: {
+        gap: {
+            smallUntilSm: 'gap-4 sm:gap-6',
+            mediumUntilSm: 'gap-6 sm:gap-4',
+        },
+    }
+}) %}
+
+<header class="{{ BaseCardHeader.apply({gap}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</header>
