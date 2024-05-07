@@ -1,8 +1,8 @@
-{% props height = "", width = "", large = "", medium = "", small = "", alt = "" %}
+{% props class = "", large = "", medium = "", small = "", alt = "" %}
 
 <picture>
 	<source srcset="{{ asset(large) }}" media="(min-width: 769px)"/>
 	<source srcset="{{ asset(medium) }}" media="(min-width: 641px)"/>
 	<source srcset="{{ asset(small) }}"/>
-	<img class="object-cover {{ height }} {{ width }}" src="{{ asset(large) }}" alt="{{ alt }}"/>
+	<img class="{{ class }}" src="{{ asset(large) }}" alt="{{ alt }}"/>
 </picture>
