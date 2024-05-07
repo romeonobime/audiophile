@@ -1,0 +1,21 @@
+{% props
+    color = 'primary',
+    opacity = '',
+%}
+
+{% set BaseCardOverline = cva({
+    base: 'body-overline',
+    variants: {
+        color: {
+            primary: 'text-primary',
+            lightest: 'text-neutral-lightest',
+        },
+        opacity: {
+            half: 'opacity-50'
+        }
+    }
+}) %}
+
+<p class="{{ BaseCardOverline.apply({color, opacity}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</p>
