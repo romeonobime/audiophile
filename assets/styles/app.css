@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --container: 1110px;
+    }
+
     @font-face {
         font-family: "Manrope";
         src: url("./../fonts/Manrope/Manrope-VariableFont_wght.ttf");
@@ -117,5 +121,12 @@
             line-height: 36px;
             letter-spacing: 1.15px;
         }
+    }
+}
+
+@layer utilities {
+    .wrapper {
+        padding-left: max(calc(50% - var(--container) / 2), 1.5rem);
+        padding-right: max(calc(50% - var(--container) / 2), 1.5rem);
     }
 }
