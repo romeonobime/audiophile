@@ -1,3 +1,132 @@
-body {
-    background-color: skyblue;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --container: 1110px;
+    }
+
+    @font-face {
+        font-family: "Manrope";
+        src: url("./../fonts/Manrope/Manrope-VariableFont_wght.ttf");
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+    em {
+        font-style: normal;
+    }
+
+    body {
+        @apply bg-neutral-lighter;
+    }
+}
+
+@layer components {
+    .heading-xxlarge {
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        line-height: 40px;
+        letter-spacing: 1.3px;
+    }
+
+    .heading-xlarge {
+        font-weight: bold;
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .heading-large {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+
+    .heading-medium {
+        font-weight: bold;
+        font-size: 28px;
+        text-transform: uppercase;
+        line-height: 38px;
+        letter-spacing: 2px;
+    }
+
+    .heading-small {
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 33px;
+        letter-spacing: 1.7px;
+    }
+
+    .heading-xsmall {
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        line-height: 24px;
+        letter-spacing: 1.3px;
+    }
+
+    .body-overline {
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 19px;
+        letter-spacing: 10px;
+    }
+
+    .subtitle {
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+
+    .body {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+
+    @media (min-width: 641px) {
+        .heading-xxlarge {
+            font-size: 56px;
+            line-height: 58px;
+            letter-spacing: 2px;
+        }
+
+        .heading-xlarge {
+            font-size: 40px;
+            line-height: 44px;
+            letter-spacing: 1.5px;
+        }
+
+        .heading-large {
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: 1.15px;
+        }
+    }
+}
+
+@layer utilities {
+    .wrapper {
+        padding-left: max(calc(50% - var(--container) / 2), 1.5rem);
+        padding-right: max(calc(50% - var(--container) / 2), 1.5rem);
+    }
 }

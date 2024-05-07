@@ -1,0 +1,24 @@
+{% props
+    size = 'heading-xlarge',
+    color = 'darkest',
+%}
+
+{% set baseCardTitle = cva({
+    base: '',
+    variants: {
+        size: {
+            xxlarge: 'heading-xxlarge',
+            xlarge: 'heading-xlarge',
+            large: 'heading-large',
+            xsmall: 'heading-xsmall'
+        },
+        color: {
+            darkest: 'text-neutral-darkest',
+            lightest: 'text-neutral-lightest',
+        },
+    }
+}) %}
+
+<h1 class="{{ baseCardTitle.apply({size, color}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</h1>
