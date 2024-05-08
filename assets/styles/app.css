@@ -129,4 +129,9 @@
         padding-left: max(calc(50% - var(--container) / 2), 1.5rem);
         padding-right: max(calc(50% - var(--container) / 2), 1.5rem);
     }
+
+    .wrapper-margin {
+        margin-left: max(calc(50% - var(--container) / 2), 1.5rem);
+        margin-right: max(calc(50% - var(--container) / 2), 1.5rem);
+    }
 }
