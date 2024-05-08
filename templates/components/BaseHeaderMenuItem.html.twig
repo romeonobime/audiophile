@@ -1,0 +1,7 @@
+{% set baseMenuItem = cva({
+    base: 'fill-neutral-lightest hover:fill-primary',
+}) %}
+
+<li class="{{ baseMenuItem.apply({}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</li>

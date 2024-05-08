@@ -1,0 +1,33 @@
+{% props theme = "" %}
+
+{% set baseMenu = cva({
+    base: "wrapper py-8",
+    variants: {
+        theme: {
+            transparent: "absolute z-50 left-0 right-0 border-b border-neutral-lightest/10 sm:wrapper-margin sm:px-0",
+        },
+    }
+}) %}
+
+<div class="{{ baseMenu.apply({theme}, attributes.render('class')) | tailwind_merge }}">
+    <menu class="relative flex justify-between w-full sm:justify-start sm:gap-[42px] md:justify-between">
+        <twig:BaseHeaderMenuItem class="md:hidden">
+            <button>
+                <twig:BaseIconHamburger/>
+            </button>
+        </twig:BaseHeaderMenuItem>
+        <twig:BaseHeaderMenuItem>
+            <a>
+                <twig:BaseIconLogo/>
+            </a>
+        </twig:BaseHeaderMenuItem>
+        <twig:BaseHeaderMenuItem class="hidden md:block">
+            <twig:BaseNavigationPrimary/>
+        </twig:BaseHeaderMenuItem>
+        <twig:BaseHeaderMenuItem class="sm:absolute sm:right-0 md:static">
+            <button>
+                <twig:BaseIconCart/>
+            </button>
+        </twig:BaseHeaderMenuItem>
+    </menu>
+</div>
