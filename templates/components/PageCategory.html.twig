@@ -1,19 +1,13 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Audiophile - category{% endblock %}
-
-{% block body %}
-    <div class="flex flex-col gap-[120px]">
-        <header>
-            <twig:BaseHeaderMenu theme="transparent" />
-            <twig:BaseHeaderTitle category="Headphones" />
-        </header>
-        <main class="flex flex-col gap-[120px]">
-            <twig:BaseListCategoryProduct />
-            <twig:BaseNavigationCategory />
-            <twig:SectionAbout />
-        </main>
-        <footer>
-        </footer>
-    </div>
-{% endblock %}
+<div class="flex flex-col gap-[120px]">
+    <header>
+        <twig:BaseHeaderMenu theme="transparent" />
+        <twig:BaseHeaderTitle category="{{ this.category }}" />
+    </header>
+    <main class="flex flex-col gap-[120px]">
+        <twig:BaseListCategoryProduct products="{{ this.products }}" />
+        <twig:BaseNavigationCategory />
+        <twig:SectionAbout />
+    </main>
+    <footer>
+    </footer>
+</div>

@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CategoryController extends AbstractController
 {
-    #[Route('/category', name: 'app_category')]
+    #[Route('/category/{category}', name: 'app_category')]
     public function index(): Response
     {
-        return $this->render('components/PageCategory.html.twig');
+        return $this->render('pages/category.html.twig');
     }
 }
