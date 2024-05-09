@@ -1,0 +1,13 @@
+<div class="flex flex-col gap-[120px]">
+    <header>
+        <twig:BaseHeaderMenu decoration="underline" />
+        <twig:BaseHeaderTitle category="{{ this.category }}" />
+    </header>
+    <main class="flex flex-col gap-[120px]">
+        <twig:BaseListCategoryProduct products="{{ this.products }}" />
+        <twig:BaseNavigationCategory />
+        <twig:SectionAbout />
+    </main>
+    <footer>
+    </footer>
+</div>

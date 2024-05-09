@@ -1,0 +1,14 @@
+<ul class="wrapper flex flex-col gap-[120px] md:gap-[160px]">
+    {% for product in products %}
+        <twig:BaseListCategoryProductItem
+            slug="{{ product.slug }}"
+            name="{{ product.name }}"
+            category="{{ product.category.name }}"
+            isNew="{{ product.isNew }}"
+            sourceImageLarge="{{ product.image.large }}"
+            sourceImageMedium="{{ product.image.medium }}"
+            sourceImageSmall="{{ product.image.small }}"
+            description="{{ product.description }}"
+        />
+    {% endfor %}
+</ul>
