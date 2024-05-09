@@ -1,0 +1,67 @@
+<section class="wrapper">
+    <ul class="flex flex-col gap-6">
+        <li>
+            <article class="relative rounded-lg bg-primary h-[600px] sm:h-[720px] md:h-[560px] overflow-hidden">
+                <div class="wrapper absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col gap-8 items-center w-full sm:gap-16 md:gap-0 md:flex-row md:items-start md:justify-evenly md:translate-y-[-40%]">
+                    <figure>
+                        <twig:BasePicture
+                            small="./images/home/small/image-speaker-zx9.png"
+                            medium="./images/home/medium/image-speaker-zx9.png"
+                            large="./images/home/large/image-speaker-zx9.png"
+                            class="w-[172px] h-[207px] sm:w-[192px] sm:h-[237px] md:w-[410px] md:h-[493px]"
+                        />
+                    </figure>
+                    <div class="flex flex-col gap-6 text-center items-center md:text-start md:items-start">
+                        <div class="flex flex-col gap-6">
+                            <twig:BaseCardTitle size="xxlarge" color="lightest">
+                                ZX9
+                                <br/>
+                                Speaker
+                            </twig:BaseCardTitle>
+                            <twig:BaseCardDescription color="lightest" opacity="high" maxWidth="small">
+                                Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
+                            </twig:BaseCardDescription>
+                        </div>
+                        <twig:BaseButton size="small" theme="darkest">See Product</twig:BaseButton>
+                    </div>
+                </div>
+            </article>
+        </li>
+        <li>
+            <article class="relative">
+                <figure class="absolute top-0 bottom-0 w-full z-[-10]">
+                    <twig:BasePicture
+                        small="./images/home/small/image-speaker-zx7.jpg"
+                        medium="./images/home/medium/image-speaker-zx7.jpg"
+                        large="./images/home/large/image-speaker-zx7.jpg"
+                        class="object-cover object-left-bottom h-full w-full rounded-lg"
+                    />
+                </figure>
+                <div class="flex flex-col gap-8 py-24 px-6 sm:px-16 md:px-24">
+                    <twig:BaseCardTitle size="small">
+                        ZX7 Speaker
+                    </twig:BaseCardTitle>
+                    <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
+                </div>
+            </article>
+        </li>
+        <li>
+            <article class="flex flex-col gap-6 sm:flex-row">
+                <figure class="w-full">
+                    <twig:BasePicture
+                        small="./images/home/small/image-earphones-yx1.jpg"
+                        medium="./images/home/medium/image-earphones-yx1.jpg"
+                        large="./images/home/large/image-earphones-yx1.jpg"
+                        class="object-cover h-[200px] w-full rounded-lg sm:h-full"
+                    />
+                </figure>
+                <div class="w-full flex flex-col gap-8 bg-neutral-light rounded-lg py-24 px-6 sm:px-16 md:px-24">
+                    <twig:BaseCardTitle size="small">
+                        YX1 Earphones
+                    </twig:BaseCardTitle>
+                    <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
+                </div>
+            </article>
+        </li>
+    </ul>
+</section>

@@ -134,4 +134,11 @@
         margin-left: max(calc(50% - var(--container) / 2), 1.5rem);
         margin-right: max(calc(50% - var(--container) / 2), 1.5rem);
     }
+
+    @media (min-width: 641px) {
+        .wrapper {
+            padding-left: max(calc(50% - var(--container) / 2), 2.5rem);
+            padding-right: max(calc(50% - var(--container) / 2), 2.5rem);
+        }
+    }
 }

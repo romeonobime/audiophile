@@ -1,0 +1,36 @@
+{% props
+    name = "xx59",
+    category = "headphones",
+    description = "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+	srcSmall = "./images/product-xx59-headphones/small/image-category-page-preview.jpg",
+	srcMedium = "./images/product-xx59-headphones/medium/image-category-page-preview.jpg",
+	srcLarge = "./images/product-xx59-headphones/large/image-category-page-preview.jpg",
+%}
+
+<li>
+	<article class="flex flex-col items-center gap-8 sm:gap-[52px] md:flex-row md:justify-between">
+		<figure>
+			<twig:BasePicture
+				small="{{ srcSmall }}"
+				medium="{{ srcMedium }}"
+				large="{{ srcLarge }}"
+				class="w-full md:w-[540px] rounded-lg"
+			/>
+		</figure>
+		<div class="flex flex-col gap-6 items-center text-center md:gap-10 sm:w-[572px] md:text-start md:items-start md:w-[445px]">
+			<div class="flex flex-col gap-6 sm:gap-8">
+				<header>
+					<twig:BaseCardTitle size="xlarge">
+						{{ name }}
+						<br/>
+						{{ category }}
+					</twig:BaseCardTitle>
+				</header>
+				<twig:BaseCardDescription>
+					{{ description }}
+				</twig:BaseCardDescription>
+			</div>
+            <twig:BaseButton size="small">See Product</twig:BaseButton>
+		</div>
+	</article>
+</li>
