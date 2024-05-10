@@ -1,5 +1,19 @@
 <div class="flex flex-col gap-[120px]">
     <header>
         <twig:BaseHeaderMenu />
+        <div class="wrapper">
+            <twig:BaseButton theme="text">Go Back</twig:BaseButton>
+        </div>
     </header>
+    <main>
+        <twig:BaseProductDetailCard
+            name="{{ this.product.name }}"
+            category="{{ this.product.category.name }}"
+            isNew="{{ this.product.isNew }}"
+            sourceImageLarge="{{ this.product.image.large }}"
+            sourceImageMedium="{{ this.product.image.medium }}"
+            sourceImageSmall="{{ this.product.image.small }}"
+            description="{{ this.product.description }}"
+        />
+    </main>
 </div>

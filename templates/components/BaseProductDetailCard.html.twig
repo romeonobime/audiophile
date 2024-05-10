@@ -1,0 +1,42 @@
+{% props
+	slug = "",
+    name = "",
+    category = "",
+	isNew = false,
+    description = "",
+	sourceImageSmall = "",
+	sourceImageMedium = "",
+	sourceImageLarge = "",
+%}
+
+<article class="wrapper flex flex-col items-center gap-8 sm:gap-[52px] md:flex-row md:justify-between">
+    <figure>
+        <twig:BasePicture
+            small="{{ sourceImageSmall }}"
+            medium="{{ sourceImageMedium }}"
+            large="{{ sourceImageLarge }}"
+            class="w-full md:w-[540px] rounded-lg"
+        />
+    </figure>
+    <div class="flex flex-col gap-6 md:gap-10 sm:w-[572px] md:text-start md:items-start md:w-[445px]">
+        <div class="flex flex-col gap-6 sm:gap-8">
+            <twig:BaseCardHeader>
+                {% if isNew %}
+                    <twig:BaseCardOverline>New product</twig:BaseCardOverline>
+                {% endif %}
+                <twig:BaseCardTitle size="xlarge">
+                    {{ name }}
+                    <br/>
+                    {{ category }}
+                </twig:BaseCardTitle>
+            </twig:BaseCardHeader>
+            <twig:BaseCardDescription>
+                {{ description }}
+            </twig:BaseCardDescription>
+        </div>
+        <twig:BaseCardFooter>
+            <twig:BaseCounter />
+            <twig:BaseButton size="small">Add to cart</twig:BaseButton>
+        </twig:BaseCardFooter>
+    </div>
+</article>
