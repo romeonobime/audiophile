@@ -1,0 +1,20 @@
+{% props
+    size = 'large',
+    quantity = 0
+%}
+
+{% set baseCounter = cva({
+    base: 'flex bg-neutral-light',
+    variants: {
+        size: {
+            small: 'w-[96px] h-[32px]',
+            large: 'w-[120px] h-[48px]',
+        },
+    }
+}) %}
+
+<div class="{{ baseCounter.apply({size}, attributes.render('class')) | tailwind_merge }}">
+    <twig:BaseCounterButton>-</twig:BaseCounterButton>
+    <twig:BaseCounterValue>{{ quantity }}</twig:BaseCounterValue>
+    <twig:BaseCounterButton>+</twig:BaseCounterButton>
+</div>
