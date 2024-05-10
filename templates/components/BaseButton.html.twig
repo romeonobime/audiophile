@@ -4,13 +4,15 @@
 %}
 
 {% set baseButton = cva({
-    base: 'subtitle flex justify-center items-center',
+    base: 'flex justify-center items-center',
     variants: {
         theme: {
-            primary: 'text-neutral-lightest bg-primary hover:bg-primary-light',
-            darkest: 'text-neutral-lightest bg-neutral-darkest hover:bg-[#4C4C4C]',
-            outline: 'bg-neutral-darkest/0 border border-neutral-darkest hover:bg-neutral-darkest hover:text-neutral-lightest',
-            arrow: 'text-neutral-darkest/50 flex gap-3 items-center group-hover:text-primary',
+            primary: 'subtitle text-neutral-lightest bg-primary hover:bg-primary-light',
+            darkest: 'subtitle text-neutral-lightest bg-neutral-darkest hover:bg-[#4C4C4C]',
+            outline: 'subtitle bg-neutral-darkest/0 border border-neutral-darkest hover:bg-neutral-darkest hover:text-neutral-lightest',
+            arrow: 'subtitle text-neutral-darkest/50 flex gap-3 items-center group-hover:text-primary',
+            icon: 'fill-neutral-lightest hover:fill-primary',
+            text: 'body text-neutral-darkest/50 hover:text-primary'
         },
         size: {
             small: 'h-12 w-40',
