@@ -21,7 +21,7 @@
 		</figure>
 		<div class="flex flex-col gap-6 items-center text-center md:gap-10 sm:w-[572px] md:text-start md:items-start md:w-[445px]">
 			<div class="flex flex-col gap-6 sm:gap-8">
-				<header class="flex flex-col gap-6 sm:gap-4">
+				<twig:BaseCardHeader>
 					{% if isNew %}
 						<twig:BaseCardOverline>New product</twig:BaseCardOverline>
 					{% endif %}
@@ -30,7 +30,7 @@
 						<br/>
 						{{ category }}
 					</twig:BaseCardTitle>
-				</header>
+				</twig:BaseCardHeader>
 				<twig:BaseCardDescription>
 					{{ description }}
 				</twig:BaseCardDescription>
