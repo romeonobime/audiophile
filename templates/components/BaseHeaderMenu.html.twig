@@ -29,24 +29,20 @@
 <div class="{{ baseMenuContainer.apply({position, theme}, attributes.render('class')) | tailwind_merge }}">
     <div class="{{ baseMenu.apply({decoration}, attributes.render('class')) | tailwind_merge }}">
         <menu class="relative flex justify-between w-full sm:justify-start sm:gap-[42px] md:justify-between">
-            <twig:BaseHeaderMenuItem class="md:hidden">
-                <button>
-                    <twig:BaseIconHamburger/>
-                </button>
-            </twig:BaseHeaderMenuItem>
-            <twig:BaseHeaderMenuItem>
-                <a>
+            <li class="md:hidden">
+                <twig:DialogNavigationTrigger />
+            </li>
+            <li>
+                <twig:BaseLink theme="icon">
                     <twig:BaseIconLogo/>
-                </a>
-            </twig:BaseHeaderMenuItem>
-            <twig:BaseHeaderMenuItem class="hidden md:block">
+                </twig:BaseLink>
+            </li>
+            <li class="hidden md:block">
                 <twig:BaseNavigationPrimary/>
-            </twig:BaseHeaderMenuItem>
-            <twig:BaseHeaderMenuItem class="sm:absolute sm:right-0 md:static">
-                <button>
-                    <twig:BaseIconCart/>
-                </button>
-            </twig:BaseHeaderMenuItem>
+            </li>
+            <li class="sm:absolute sm:right-0 md:static">
+                <twig:DialogCartTrigger />
+            </li>
         </menu>
     </div>
 </div>
