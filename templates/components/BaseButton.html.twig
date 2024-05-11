@@ -1,6 +1,8 @@
 {% props
     theme = 'primary',
     size = '',
+    action = '',
+    param = '',
 %}
 
 {% set baseButton = cva({
@@ -20,7 +22,11 @@
     }
 }) %}
 
-<button class="{{ baseButton.apply({theme, size}, attributes.render('class')) | tailwind_merge }}">
+<button
+    class="{{ baseButton.apply({theme, size}, attributes.render('class')) | tailwind_merge }}"
+    data-action="{{ action }}"
+    data-live-event-param="{{ param }}"
+>
     {% block content %}{% endblock %}
     {% if theme == "arrow" %}
         <twig:BaseIconArrow />
