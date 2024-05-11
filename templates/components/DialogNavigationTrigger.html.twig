@@ -1,7 +1,9 @@
+{% props action = "", param = ""  %}
+
 <twig:BaseButton
     theme="icon"
-    action="click->dialog#tigger"
-    param="triggerNavigation"
+    action="{{ action }}"
+    param="{{ param }}"
 >
     <twig:BaseIconHamburger/>
 </twig:BaseButton>

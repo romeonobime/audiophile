@@ -4,11 +4,16 @@
 
 {% block body %}
     <div class="flex flex-col gap-[120px]">
-        <header>
-            <div data-controller="dialog">
-                <twig:BaseHeaderMenu theme="transparent" position="absolute" decoration="underline" />
-                <twig:DialogNavigationContent />
-            </div>
+        <header data-controller="dialog">
+            <twig:BaseHeaderMenu
+                theme="transparent"
+                position="absolute"
+                decoration="underline"
+            >
+                <twig:block name="navigation">
+                    <twig:DialogNavigation />
+                </twig:block>
+            </twig:BaseHeaderMenu>
             <twig:SectionHero />
         </header>
         <main class="flex flex-col gap-[120px]">

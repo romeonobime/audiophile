@@ -30,7 +30,7 @@
     <div class="{{ baseMenu.apply({decoration}, attributes.render('class')) | tailwind_merge }}">
         <menu class="relative flex justify-between w-full sm:justify-start sm:gap-[42px] md:justify-between">
             <li class="md:hidden">
-                <twig:DialogNavigationTrigger />
+                {% block navigation %}{% endblock %}
             </li>
             <li>
                 <twig:BaseLink theme="icon">
@@ -41,7 +41,7 @@
                 <twig:BaseNavigationPrimary/>
             </li>
             <li class="sm:absolute sm:right-0 md:static">
-                <twig:DialogCartTrigger />
+                {% block cart %}{% endblock %}
             </li>
         </menu>
     </div>

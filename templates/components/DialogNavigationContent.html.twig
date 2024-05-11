@@ -1,4 +1,11 @@
 <dialog data-dialog-target="dialog">
-    <twig:BaseHeaderMenu />
+    <twig:BaseHeaderMenu>
+        <twig:block name="navigation">
+            <twig:DialogNavigationTrigger
+                action="click->dialog#close"
+                param="triggerNavigation"
+            />
+        </twig:block>
+    </twig:BaseHeaderMenu>
     <twig:BaseNavigationCategory />
 </dialog>
