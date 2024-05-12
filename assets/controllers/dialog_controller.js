@@ -5,11 +5,10 @@ export default class extends Controller {
         return ["dialog"];
       }
 
-      tigger() {
-        if(this.dialogTarget.open) {
-          this.dialogTarget.close();
-        } else {
-          this.dialogTarget.showModal();
-        }
+      open() {
+        this.dialogTarget.showModal();
+      }
+      close() {
+        this.dialogTarget.close();
       }
 }

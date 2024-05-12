@@ -1,4 +1,13 @@
 <dialog data-dialog-target="dialog">
-    <twig:BaseHeaderMenu />
-    <twig:BaseNavigationCategory />
+    <twig:BaseHeaderMenu>
+        <twig:block name="cart">
+            <twig:DialogCartTrigger action="click->dialog#close" />
+        </twig:block>
+        <twig:block name="navigation">
+            <twig:DialogNavigationTrigger action="click->dialog#close" />
+        </twig:block>
+    </twig:BaseHeaderMenu>
+    <twig:BaseCard class="rounded-t-none py-10">
+        <twig:BaseNavigationCategory />
+    </twig:BaseCard>
 </dialog>

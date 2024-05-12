@@ -1,22 +1,23 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello HomeController!{% endblock %}
-
-{% block body %}
-    <div class="flex flex-col gap-[120px]">
-        <header>
-            <div data-controller="dialog">
-                <twig:BaseHeaderMenu theme="transparent" position="absolute" decoration="underline" />
-                <twig:DialogNavigationContent />
-            </div>
-            <twig:SectionHero />
-        </header>
-        <main class="flex flex-col gap-[120px]">
-            <twig:BaseNavigationCategory />
-            <twig:SectionShowcase />
-            <twig:SectionAbout />
-        </main>
-        <footer>
-        </footer>
-    </div>
-{% endblock %}
+<div class="flex flex-col gap-[120px]">
+    <header>
+        <twig:BaseHeaderMenu
+            theme="transparent"
+            position="absolute"
+            decoration="underline"
+        >
+            <twig:block name="navigation">
+                <twig:DialogNavigation />
+            </twig:block>
+            <twig:block name="cart">
+                <twig:DialogCart />
+            </twig:block>
+        </twig:BaseHeaderMenu>
+        <twig:SectionHero />
+    </header>
+    <main class="flex flex-col gap-[120px]">
+        <twig:BaseNavigationCategory />
+        <twig:SectionShowcase />
+        <twig:SectionAbout />
+    </main>
+    <twig:LayoutFooter />
+</div>
