@@ -1,0 +1,8 @@
+{% set baseCard = cva({
+    base: 'rounded-lg bg-neutral-lightest'
+}) %}
+
+
+<article class="{{ baseCard.apply({}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</article>
