@@ -1,8 +1,19 @@
+{% props
+    color = '',
+%}
+
 {% set baseCard = cva({
-    base: 'rounded-lg bg-neutral-lightest'
+    base: 'rounded-lg',
+    variants: {
+        color: {
+            lightest: 'bg-neutral-lightest',
+            light: 'bg-neutral-light',
+            primary: 'bg-primary',
+        },
+    }
 }) %}
 
 
-<article class="{{ baseCard.apply({}, attributes.render('class')) | tailwind_merge }}">
+<article class="{{ baseCard.apply({color}, attributes.render('class')) | tailwind_merge }}">
     {% block content %}{% endblock %}
 </article>
