@@ -1,7 +1,7 @@
 <section class="wrapper">
     <ul class="flex flex-col gap-6">
         <li>
-            <article class="relative rounded-lg bg-primary h-[600px] sm:h-[720px] md:h-[560px] overflow-hidden">
+            <twig:BaseCard color="primary" class="relative h-[600px] sm:h-[720px] md:h-[560px] overflow-hidden">
                 <div class="wrapper absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col gap-8 items-center w-full sm:gap-16 md:gap-0 md:flex-row md:items-start md:justify-evenly md:translate-y-[-40%]">
                     <figure>
                         <twig:BasePicture
@@ -25,16 +25,16 @@
                         <twig:BaseButton size="small" theme="darkest">See Product</twig:BaseButton>
                     </div>
                 </div>
-            </article>
+            </twig:BaseCard>
         </li>
         <li>
-            <article class="relative">
+            <twig:BaseCard class="relative overflow-hidden">
                 <figure class="absolute top-0 bottom-0 w-full z-[-10]">
                     <twig:BasePicture
                         small="./images/home/small/image-speaker-zx7.jpg"
                         medium="./images/home/medium/image-speaker-zx7.jpg"
                         large="./images/home/large/image-speaker-zx7.jpg"
-                        class="object-cover object-left-bottom h-full w-full rounded-lg"
+                        class="object-cover object-left-bottom h-full w-full"
                     />
                 </figure>
                 <div class="flex flex-col gap-8 py-24 px-6 sm:px-16 md:px-24">
@@ -43,7 +43,7 @@
                     </twig:BaseCardTitle>
                     <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
                 </div>
-            </article>
+            </twig:BaseCard>
         </li>
         <li>
             <article class="flex flex-col gap-6 sm:flex-row">
@@ -55,12 +55,14 @@
                         class="object-cover h-[200px] w-full rounded-lg sm:h-full"
                     />
                 </figure>
-                <div class="w-full flex flex-col gap-8 bg-neutral-light rounded-lg py-24 px-6 sm:px-16 md:px-24">
-                    <twig:BaseCardTitle size="small">
-                        YX1 Earphones
-                    </twig:BaseCardTitle>
-                    <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
-                </div>
+                <twig:BaseCard color="light" class="w-full h-[200px] sm:h-auto flex items-center">
+                    <div class="flex flex-col gap-8 pl-6 sm:pl-14 md:pl-[100px]">
+                        <twig:BaseCardTitle size="small">
+                            YX1 Earphones
+                        </twig:BaseCardTitle>
+                        <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
+                    </div>
+                </twig:BaseCard>
             </article>
         </li>
     </ul>
