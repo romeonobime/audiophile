@@ -7,6 +7,7 @@ use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Repository\ProductRepository;
+use Symfony\UX\TwigComponent\Attribute\ExposeInTemplate;
 
 #[AsTwigComponent]
 class PageDetail
@@ -29,6 +30,7 @@ class PageDetail
         return $slug;
     }
 
+    #[ExposeInTemplate]
     public function getProduct(): ?Product
     {
         $slug = $this->getSlug();

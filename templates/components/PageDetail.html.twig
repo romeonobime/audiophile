@@ -1,19 +1,41 @@
-<div class="flex flex-col gap-[120px]">
-    <header>
-        <twig:BaseHeaderMenu />
+<twig:BaseLayout>
+    <header class="flex flex-col gap-4 mb-[-96px] sm:gap-8 md:gap-20 md:mb-[-64px]">
+        <twig:BaseHeaderMenu>
+            <twig:block name="navigation">
+                <twig:DialogNavigation />
+            </twig:block>
+            <twig:block name="cart">
+                <twig:DialogCart />
+            </twig:block>
+        </twig:BaseHeaderMenu>
         <div class="wrapper">
             <twig:BaseButton theme="text">Go Back</twig:BaseButton>
         </div>
     </header>
     <main>
-        <twig:BaseProductDetailCard
-            name="{{ this.product.name }}"
-            category="{{ this.product.category.name }}"
-            isNew="{{ this.product.isNew }}"
-            sourceImageLarge="{{ this.product.image.large }}"
-            sourceImageMedium="{{ this.product.image.medium }}"
-            sourceImageSmall="{{ this.product.image.small }}"
-            description="{{ this.product.description }}"
-        />
+        <twig:BaseLayout class="md:gap-[160px]">
+            <div class="flex flex-col gap-[88px] sm:gap-[120px] md:gap-[160px]">
+                <twig:BaseProductDetailCard
+                    name="{{ product.name }}"
+                    category="{{ product.category.name }}"
+                    isNew="{{ product.isNew }}"
+                    sourceImageLarge="{{ product.image.large }}"
+                    sourceImageMedium="{{ product.image.medium }}"
+                    sourceImageSmall="{{ product.image.small }}"
+                    description="{{ product.description }}"
+                />
+                <twig:BaseProductDetailInformation
+                    feature="{{ product.feature }}"
+                    includes="{{ product.includes }}"
+                />
+                <twig:BaseProductDetailGallery
+                    gallery="{{ product.gallery }}"
+                />
+            </div>
+            <twig:BaseProductDetailOther products="{{ product.others }}" />
+            <twig:BaseNavigationCategory />
+            <twig:SectionAbout />
+        </twig:BaseLayout>
     </main>
-</div>
+    <twig:LayoutFooter />
+</twig:BaseLayout>

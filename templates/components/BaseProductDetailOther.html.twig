@@ -1,0 +1,6 @@
+{% props products = [] %}
+
+<div class="wrapper flex flex-col items-center gap-10 sm:gap-14 md:gap-16">
+    <twig:BaseCardTitle size="medium">You may also like</twig:BaseCardTitle>
+    <twig:BaseProductDetailOtherList products="{{ products }}" />
+</div>

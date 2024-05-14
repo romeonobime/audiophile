@@ -1,0 +1,13 @@
+{% props products = [] %}
+
+<ul class="flex flex-col gap-14 sm:flex-row sm:gap-3 md:gap-8">
+    {% for product in products %}
+        <twig:BaseProductDetailOtherListItem
+            slug="{{ product.slug }}"
+            name="{{ product.name }}"
+            sourceImageLarge="{{ product.sharedImage.large }}"
+            sourceImageMedium="{{ product.sharedImage.medium }}"
+            sourceImageSmall="{{ product.sharedImage.small }}"
+        />
+    {% endfor %}
+</ul>
