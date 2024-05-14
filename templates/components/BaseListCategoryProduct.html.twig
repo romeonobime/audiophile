@@ -9,6 +9,7 @@
             sourceImageMedium="{{ product.categoryImage.medium }}"
             sourceImageSmall="{{ product.categoryImage.small }}"
             description="{{ product.description }}"
+            isReversed="{{ loop.index is divisible by(2) }}"
         />
     {% endfor %}
 </ul>
