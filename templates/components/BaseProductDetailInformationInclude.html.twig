@@ -1,0 +1,15 @@
+{% props includes = [] %}
+
+<div class="flex flex-col gap-6 sm:flex-row sm:justify-between sm:max-w-[550px] md:max-w-[350px] md:flex-col md:justify-start md:w-full">
+    <twig:BaseCardTitle size="medium">In the box</twig:BaseCardTitle>
+    <ul class="flex flex-col gap-2">
+        {% for item in includes %}
+            <li>
+                <div class="flex gap-5">
+                    <p class="body text-primary font-bold">{{ item.quantity }}x</p>
+                    <twig:BaseCardDescription>{{ item.name }}</twig:BaseCardDescription>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
