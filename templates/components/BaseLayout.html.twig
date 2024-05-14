@@ -1,0 +1,17 @@
+{% props
+    spacing = 'default',
+%}
+
+{% set baseLayout = cva({
+    base: 'flex flex-col',
+    variants: {
+        spacing: {
+            default: 'gap-[120px]',
+        },
+    }
+}) %}
+
+
+<div class="{{ baseLayout.apply({spacing}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</div>
