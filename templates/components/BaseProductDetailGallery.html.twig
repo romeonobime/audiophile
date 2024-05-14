@@ -1,12 +1,12 @@
 {% props gallery = [] %}
 
-<ul class="wrapper flex flex-col gap-5 sm:grid">
+<ul class="wrapper flex flex-col gap-5 md:gap-8 sm:grid sm:grid-cols-[1fr_1.45fr]">
     <li class="col-start-1 row-start-1">
         <twig:BasePicture
             small="{{ gallery.first.small }}"
             medium="{{ gallery.first.medium }}"
             large="{{ gallery.first.large }}"
-            class="object-cover rounded-lg w-full h-full sm:min-w-[277px]"
+            class="object-cover rounded-lg w-full h-full sm:h-[174px] md:h-[280px]"
         />
     </li>
     <li class="col-start-1 row-start-2">
@@ -14,7 +14,7 @@
             small="{{ gallery.second.small }}"
             medium="{{ gallery.second.medium }}"
             large="{{ gallery.second.large }}"
-            class="object-cover rounded-lg w-full h-full sm:min-w-[277px]"
+            class="object-cover rounded-lg w-full h-full sm:h-[174px] md:h-[280px]"
         />
     </li>
     <li class="col-start-2 row-span-2 col-span-1">
@@ -22,7 +22,7 @@
             small="{{ gallery.third.small }}"
             medium="{{ gallery.third.medium }}"
             large="{{ gallery.third.large }}"
-            class="object-cover rounded-lg w-full h-full sm:min-w-[395px]"
+            class="object-cover rounded-lg w-full sm:h-[368px] md:h-[592px]"
         />
     </li>
 </ul>
