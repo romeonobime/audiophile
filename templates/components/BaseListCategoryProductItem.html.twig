@@ -7,10 +7,11 @@
 	sourceImageSmall = "",
 	sourceImageMedium = "",
 	sourceImageLarge = "",
+	isReversed = false
 %}
 
 <li>
-	<article class="flex flex-col items-center gap-8 sm:gap-[52px] md:flex-row md:justify-between">
+	<article class="flex flex-col items-center gap-8 sm:gap-[52px] md:flex-row md:justify-between {{ isReversed ? "md:flex-row-reverse" : "" }}">
 		<figure>
 			<twig:BasePicture
 				small="{{ sourceImageSmall }}"

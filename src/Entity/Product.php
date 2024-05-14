@@ -67,6 +67,9 @@ class Product
     #[ORM\Column(type: Types::TEXT)]
     private ?string $feature = null;
 
+    #[ORM\Column]
+    private array $sharedImage = [];
+
     public function __construct()
     {
         $this->includes = new ArrayCollection();
@@ -271,6 +274,18 @@ class Product
     public function setFeature(string $feature): static
     {
         $this->feature = $feature;
+
+        return $this;
+    }
+
+    public function getSharedImage(): array
+    {
+        return $this->sharedImage;
+    }
+
+    public function setSharedImage(array $sharedImage): static
+    {
+        $this->sharedImage = $sharedImage;
 
         return $this;
     }

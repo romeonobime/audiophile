@@ -1,0 +1,24 @@
+{%
+    props
+    slug = "",
+    name = "",
+    sourceImageLarge = "",
+    sourceImageMedium = "",
+    sourceImageSmall = "",
+%}
+
+<article class="flex flex-col gap-8 sm:gap-10 items-center">
+    <figure>
+        <twig:BasePicture
+            small="{{ sourceImageSmall }}"
+            medium="{{ sourceImageMedium }}"
+            large="{{ sourceImageLarge }}"
+        />
+    </figure>
+    <div class="flex flex-col items-center gap-8">
+        <header>
+            <twig:BaseCardTitle size="small">{{ name }}</twig:BaseCardTitle>
+        </header>
+        <twig:BaseButton size="small">See product</twig:BaseButton>
+    </div>
+</article>

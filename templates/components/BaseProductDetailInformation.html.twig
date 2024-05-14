@@ -1,0 +1,6 @@
+{% props feature = "", includes = [] %}
+
+<div class="wrapper flex flex-col gap-[88px] sm:gap-[120px] md:flex-row md:justify-between">
+    <twig:BaseProductDetailInformationFeature feature="{{ feature }}" />
+    <twig:BaseProductDetailInformationInclude includes="{{ includes }}" />
+</div>
