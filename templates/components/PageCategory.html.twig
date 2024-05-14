@@ -1,13 +1,21 @@
-<div class="flex flex-col gap-[120px]">
+<twig:BaseLayout>
     <header>
-        <twig:BaseHeaderMenu decoration="underline" />
-        <twig:BaseHeaderTitle category="{{ this.category }}" />
+        <twig:BaseHeaderMenu decoration="underline">
+            <twig:block name="navigation">
+                <twig:DialogNavigation />
+            </twig:block>
+            <twig:block name="cart">
+                <twig:DialogCart />
+            </twig:block>
+        </twig:BaseHeaderMenu>
+        <twig:BaseHeaderTitle category="{{ category }}" />
     </header>
-    <main class="flex flex-col gap-[120px]">
-        <twig:BaseListCategoryProduct products="{{ this.products }}" />
-        <twig:BaseNavigationCategory />
-        <twig:SectionAbout />
+    <main>
+        <twig:BaseLayout>
+            <twig:BaseListCategoryProduct products="{{ products }}" />
+            <twig:BaseNavigationCategory />
+            <twig:SectionAbout />
+        </twig:BaseLayout>
     </main>
-    <footer>
-    </footer>
-</div>
+    <twig:LayoutFooter />
+</twig:BaseLayout>

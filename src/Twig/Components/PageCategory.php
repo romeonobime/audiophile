@@ -3,6 +3,7 @@
 namespace App\Twig\Components;
 
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
+use Symfony\UX\TwigComponent\Attribute\ExposeInTemplate;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Repository\ProductRepository;
@@ -19,6 +20,7 @@ class PageCategory
         $this->productRepository = $productRepository;
     }
 
+    #[ExposeInTemplate]
     public function getCategory()
     {
         $request = $this->requestStack->getCurrentRequest();
@@ -28,6 +30,7 @@ class PageCategory
         return $category;
     }
 
+    #[ExposeInTemplate]
     public function getProducts(): array
     {
         $category = $this->getCategory();
