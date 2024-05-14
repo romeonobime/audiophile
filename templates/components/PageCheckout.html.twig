@@ -1,0 +1,21 @@
+<twig:BaseLayout>
+    <header class="flex flex-col gap-4 mb-[-96px] sm:gap-8 md:gap-20 md:mb-[-64px]">
+        <twig:BaseHeaderMenu>
+            <twig:block name="navigation">
+                <twig:DialogNavigation />
+            </twig:block>
+            <twig:block name="cart">
+                <twig:DialogCart />
+            </twig:block>
+        </twig:BaseHeaderMenu>
+        <div class="wrapper">
+            <twig:BaseButton theme="text">Go Back</twig:BaseButton>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <twig:LayoutCheckout />
+        </div>
+    </main>
+    <twig:LayoutFooter />
+</twig:BaseLayout>
