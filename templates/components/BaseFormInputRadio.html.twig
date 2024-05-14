@@ -1,0 +1,14 @@
+{% props
+    label = "",
+    placeholder = "",
+    name = ""
+%}
+
+{% set baseFormInputRadio = cva({
+    base: 'input flex gap-4 items-center'
+}) %}
+
+<label class="{{ baseFormInputRadio.apply({}, attributes.render('class')) | tailwind_merge }}">
+    <input class="input-radio" type="radio" id="{{ label }}" name="{{ name }}" />
+    <span class="font-bold text-[14px] tracking[-0.25px] text-neutral-darkest">{{ label }}</span>
+</label>
