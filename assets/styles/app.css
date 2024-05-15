@@ -39,6 +39,25 @@
         max-height: 100%;
         @apply bg-neutral-darkest/40;
     }
+
+    input[type="radio"] {
+        appearance: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="radio"]::before {
+        content: "";
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        @apply h-2.5 w-2.5 bg-primary rounded-full;
+    }
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
 }
 
 @layer components {
@@ -109,6 +128,18 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 25px;
+    }
+
+    .input {
+        @apply px-6 h-[56px] border border-neutral-darkest/20 rounded-lg;
+    }
+
+    .input-text {
+        @apply text-neutral-darkest font-bold font-[14px] caret-primary;
+    }
+
+    .input-radio {
+        @apply border border-neutral-darkest/20 rounded-full h-5 w-5;
     }
 
     @media (min-width: 641px) {
