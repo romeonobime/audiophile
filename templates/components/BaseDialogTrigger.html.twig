@@ -1,0 +1,21 @@
+{% props
+    theme = 'icon',
+    action = '',
+%}
+
+{% set baseDialogTrigger = cva({
+    base: 'flex justify-center items-center',
+    variants: {
+        theme: {
+            primary: 'subtitle text-neutral-lightest bg-primary hover:bg-primary-light',
+            icon: 'fill-neutral-lightest hover:fill-primary',
+        },
+    }
+}) %}
+
+<button
+    class="{{ baseDialogTrigger.apply({theme}, attributes.render('class')) | tailwind_merge }}"
+    data-action="{{ action }}"
+>
+    {% block content %}{% endblock %}
+</button>

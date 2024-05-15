@@ -1,0 +1,13 @@
+{% props
+    label = "",
+    placeholder = "",
+%}
+
+{% set baseFormInputText = cva({
+    base: 'flex flex-col gap-[9px] w-full'
+}) %}
+
+<div class="{{ baseFormInputText.apply({}, attributes.render('class')) | tailwind_merge }}">
+    <label class="font-bold text-[12px] tracking-[.21px]">{{ label }}</label>
+    <input class="input input-text" placeholder="{{ placeholder }}" />
+</div>

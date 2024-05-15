@@ -1,0 +1,7 @@
+{% set baseFormInputGroup = cva({
+    base: 'flex flex-col gap-6 sm:grid sm:gap-x-4 sm:gap-y-6'
+}) %}
+
+<div class="{{ baseFormInputGroup.apply({}, attributes.render('class')) | tailwind_merge }}">
+    {% block content %}{% endblock %}
+</div>
