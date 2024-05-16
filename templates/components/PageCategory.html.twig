@@ -2,10 +2,10 @@
     <header>
         <twig:BaseHeaderMenu decoration="underline">
             <twig:block name="navigation">
-                <twig:DialogNavigation />
+                <twig:NavigationDialog />
             </twig:block>
             <twig:block name="cart">
-                <twig:DialogCart />
+                <twig:CartDialog />
             </twig:block>
         </twig:BaseHeaderMenu>
         <twig:BaseHeaderTitle category="{{ category }}" />
@@ -14,8 +14,8 @@
         <twig:BaseLayout>
             <twig:BaseListCategoryProduct products="{{ products }}" />
             <twig:BaseNavigationCategory />
-            <twig:SectionAbout />
+            <twig:BaseAbout />
         </twig:BaseLayout>
     </main>
-    <twig:LayoutFooter />
+    <twig:BaseFooter />
 </twig:BaseLayout>

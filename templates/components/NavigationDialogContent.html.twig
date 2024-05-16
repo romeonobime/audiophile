@@ -1,0 +1,17 @@
+<twig:BaseDialogContent>
+    <twig:BaseHeaderMenu>
+        <twig:block name="cart">
+            <twig:BaseDialogTrigger theme="icon" action="click->dialog#close">
+                <twig:BaseIconCart />
+            </twig:BaseDialogTrigger>
+        </twig:block>
+        <twig:block name="navigation">
+            <twig:BaseDialogTrigger theme="icon" action="click->dialog#close">
+                <twig:BaseIconHamburger />
+            </twig:BaseDialogTrigger>
+        </twig:block>
+    </twig:BaseHeaderMenu>
+    <twig:BaseCard color="lightest" class="rounded-t-none py-10">
+        <twig:BaseNavigationCategory />
+    </twig:BaseCard>
+</twig:BaseDialogContent>
