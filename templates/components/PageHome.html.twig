@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-[120px]">
+<twig:BaseLayout>
     <header>
         <twig:BaseHeaderMenu
             theme="transparent"
@@ -6,18 +6,18 @@
             decoration="underline"
         >
             <twig:block name="navigation">
-                <twig:DialogNavigation />
+                <twig:NavigationDialog />
             </twig:block>
             <twig:block name="cart">
-                <twig:DialogCart />
+                <twig:CartDialog />
             </twig:block>
         </twig:BaseHeaderMenu>
-        <twig:SectionHero />
+        <twig:BaseHero />
     </header>
-    <main class="flex flex-col gap-[120px]">
+    <twig:BaseLayoutMain>
         <twig:BaseNavigationCategory />
-        <twig:SectionShowcase />
-        <twig:SectionAbout />
-    </main>
-    <twig:LayoutFooter />
-</div>
+        <twig:BaseShowcase />
+        <twig:BaseAbout />
+    </twig:BaseLayoutMain>
+    <twig:BaseFooter />
+</twig:BaseLayout>
