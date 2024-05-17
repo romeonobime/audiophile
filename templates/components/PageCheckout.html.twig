@@ -2,10 +2,10 @@
     <header class="flex flex-col gap-4 mb-[-96px] sm:gap-8 md:gap-20 md:mb-[-64px]">
         <twig:BaseHeaderMenu>
             <twig:block name="navigation">
-                <twig:DialogNavigation />
+                <twig:NavigationDialog />
             </twig:block>
             <twig:block name="cart">
-                <twig:DialogCart />
+                <twig:CartDialog />
             </twig:block>
         </twig:BaseHeaderMenu>
         <div class="wrapper">
@@ -13,9 +13,10 @@
         </div>
     </header>
     <main>
-        <div class="wrapper">
-            <twig:LayoutCheckout />
+        <div class="wrapper flex flex-col gap-8 md:flex-row md:justify-between">
+            <twig:CheckoutForm />
+            <twig:CheckoutSummary />
         </div>
     </main>
-    <twig:LayoutFooter />
+    <twig:BaseFooter />
 </twig:BaseLayout>

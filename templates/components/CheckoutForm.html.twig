@@ -1,0 +1,101 @@
+<twig:BaseCard
+    color="lightest"
+    class="w-full max-w-[730px] py-[54px] px-6 sm:px-7 md:px-12"
+>
+    <div class="flex flex-col gap-10">
+        <twig:BaseCardTitle>Checkout</twig:BaseCardTitle>
+        <div class="flex flex-col gap-8 sm:gap-[60px] md:gap-[52px]">
+            <div class="flex flex-col gap-4">
+                <p class="subtitle text-primary" >Billing Details</p>
+                <twig:BaseFormInputGroup class="sm:grid-cols-2">
+                    <twig:BaseFormInputText
+                        label="Name"
+                        placeholder="Alexei Ward"
+                    />
+                    <twig:BaseFormInputText
+                        label="Email Address"
+                        placeholder="alexei@mail.com"
+                        class="col-start-2"
+                    />
+                    <twig:BaseFormInputText
+                        label="Phone Number"
+                        placeholder="+1 202-555-0136"
+                    />
+                </twig:BaseFormInputGroup>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="subtitle text-primary" >Shipping info</p>
+                <twig:BaseFormInputGroup class="sm:grid-cols-2 sm:grid-rows-3">
+                    <twig:BaseFormInputText
+                        label="Your Address"
+                        placeholder="1137 Williams Avenue"
+                        class="col-span-2"
+                    />
+                    <twig:BaseFormInputText
+                        label="ZIP Code"
+                        placeholder="10001"
+                    />
+                    <twig:BaseFormInputText
+                        label="City"
+                        placeholder="New York"
+                    />
+                    <twig:BaseFormInputText
+                        label="Country"
+                        placeholder="United States"
+                    />
+                </twig:BaseFormInputGroup>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="subtitle text-primary" >Payment details</p>
+                <div data-controller="radio">
+                    <twig:BaseFormInputGroup class="sm:grid-cols-2">
+                        <label class="col-start-1 row-start-1 font-bold text-[14px] tracking[-0.25px] text-neutral-darkest">Payment Method</label>
+                        <ul class="flex flex-col gap-4">
+                            <li>
+                                <twig:BaseFormInputRadio
+                                    isChecked
+                                    target="radio"
+                                    name="payment_method"
+                                    label="e-Money"
+                                    value="e-Money"
+                                    class="col-start-2"
+                                />
+                            </li>
+                            <li>
+                                <twig:BaseFormInputRadio
+                                    target="radio"
+                                    name="payment_method"
+                                    value="cash_on_delivery"
+                                    label="Cash on Delivery"
+                                    class="col-start-2 row-start-2"
+                                />
+                            </li>
+                        </ul>
+                        <div class="col-span-2">
+                            <div id="e-Money" data-radio-target="content">
+                                <twig:BaseFormInputGroup  class="sm:grid-cols-2">
+                                    <twig:BaseFormInputText
+                                        label="e-Money Number"
+                                        placeholder="238521993"
+                                    />
+                                    <twig:BaseFormInputText
+                                        label="e-Money PIN"
+                                        placeholder="6891"
+                                    />
+                                </twig:BaseFormInputGroup>
+                            </div>
+                            <div id="cash_on_delivery" data-radio-target="content">
+                                <div class="flex flex-col sm:flex-row gap-8">
+                                    <div class="flex justify-center items-center">
+                                        <twig:BaseIconCashOnDelivery />
+                                    </div>
+                                    <p class="body text-neutral-darkest/50">The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </twig:BaseFormInputGroup>
+                </div>
+            </div>
+        </div>
+    </div>
+</twig:BaseCard>
