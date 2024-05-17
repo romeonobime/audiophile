@@ -1,7 +1,9 @@
 {% props
     label = "",
-    placeholder = "",
-    name = ""
+    name = "",
+    value = "",
+    target = "",
+    isChecked = false,
 %}
 
 {% set baseFormInputRadio = cva({
@@ -9,6 +11,6 @@
 }) %}
 
 <label class="{{ baseFormInputRadio.apply({}, attributes.render('class')) | tailwind_merge }}">
-    <input class="input-radio" type="radio" id="{{ label }}" name="{{ name }}" />
+    <input checked="{{ isChecked }}" data-action="change->radio#display" class="input-radio" data-radio-target="{{ target }}" type="radio" id="{{ label }}" name="{{ name }}" value="{{ value }}" />
     <span class="font-bold text-[14px] tracking[-0.25px] text-neutral-darkest">{{ label }}</span>
 </label>
