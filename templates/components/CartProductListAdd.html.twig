@@ -1,0 +1,12 @@
+<div class="flex gap-4" {{ attributes }}>
+	<twig:BaseCounter />
+	<twig:BaseButton
+        size="small"
+        data-action="live#emit"
+        data-live-event-param="addOneCartItem"
+        data-live-product-id-param="{{ this.productId }}"
+        data-live-quantity-param="{{ this.quantity }}"
+    >
+		Add to cart
+	</twig:BaseButton>
+</div>

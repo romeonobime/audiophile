@@ -1,6 +1,8 @@
 {% props
-    quantity = 0,
     isReadOnly = false,
+	name = "",
+	price = 0,
+    quantity = 0,
 %}
 
 <article class="flex justify-between items-center">
@@ -15,16 +17,16 @@
 		</figure>
 		<div>
 			<p class="body font-bold uppercase">
-				xx99 MK II
+				{{ name }}
 			</p>
 			<p class="text-[14px] font-bold text-neutral-darkest/50">
-				$ 899
+				$ {{ price }}
 			</p>
 		</div>
 	</div>
     {% if isReadOnly %}
         <p class="font-bold body text-neutral-darkest/50">x{{ quantity }}</p>
     {% else %}
-        <twig:BaseCounter size="small" quantity="{{ quantity }}" />
+        <twig:BaseCounter size="small" value="{{ quantity }}" />
     {% endif %}
 </article>

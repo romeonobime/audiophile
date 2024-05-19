@@ -1,6 +1,8 @@
 {% props
     size = 'large',
-    quantity = 0
+    autocomplete = "off",
+    value = 0,
+    key = 0
 %}
 
 {% set baseCounter = cva({
@@ -14,7 +16,21 @@
 }) %}
 
 <div class="{{ baseCounter.apply({size}, attributes.render('class')) | tailwind_merge }}">
-    <twig:BaseCounterButton>-</twig:BaseCounterButton>
-    <twig:BaseCounterValue>{{ quantity }}</twig:BaseCounterValue>
-    <twig:BaseCounterButton>+</twig:BaseCounterButton>
+    <twig:BaseCounterButton
+        data-action="live#action"
+        data-live-action-param="decrease"
+        data-live-key-param="{{ key }}"
+        data-live-quantity-param="{{ value }}"
+    >
+        -
+    </twig:BaseCounterButton>
+    <twig:BaseCounterValue value="{{ value }}" />
+    <twig:BaseCounterButton
+        data-action="live#action"
+        data-live-action-param="increase"
+        data-live-key-param="{{ key }}"
+        data-live-quantity-param="{{ value }}"
+    >
+        +
+    </twig:BaseCounterButton>
 </div>

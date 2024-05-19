@@ -1,3 +1,10 @@
-<span class="font-bold text-[13px] tracking-[1px] text-neutral-darkest flex justify-center items-center w-full">
-    {% block content %}{% endblock %}
-</span>
+{% props value = 0 %}
+
+<input
+    type="number"
+    min=1
+    value={{ value }}
+    autocomplete="off"
+    data-model="quantity"
+    class="text-center bg-neutral-darkest/0 font-bold text-[13px] tracking-[1px] text-neutral-darkest w-full"
+/>
