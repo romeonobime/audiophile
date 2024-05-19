@@ -1,3 +1,6 @@
-<button class="font-bold text-[13px] tracking-[1px] text-neutral-darkest/50 hover:text-primary w-full">
+<button
+    {{ attributes }}
+    class="font-bold text-[13px] tracking-[1px] text-neutral-darkest/50 hover:text-primary w-full"
+>
     {% block content %}{% endblock %}
 </button>

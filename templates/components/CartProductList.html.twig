@@ -1,4 +1,10 @@
 <ul class="flex flex-col gap-6">
-    <twig:CartProductListItem />
-    <twig:CartProductListItem />
+	{% for cartItem in cartItems %}
+		<twig:CartProductListItem
+			key="{{ cartItem.product.id }}"
+			name="{{ cartItem.product.name }}"
+			price="{{ cartItem.product.price }}"
+			quantity="{{ cartItem.quantity }}"
+		/>
+	{% endfor %}
 </ul>

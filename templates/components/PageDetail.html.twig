@@ -16,6 +16,7 @@
         <twig:BaseLayout class="md:gap-[160px]">
             <div class="flex flex-col gap-[88px] sm:gap-[120px] md:gap-[160px]">
                 <twig:BaseProductDetailCard
+                    productId="{{ product.id }}"
                     name="{{ product.name }}"
                     category="{{ product.category.name }}"
                     isNew="{{ product.isNew }}"
@@ -23,6 +24,7 @@
                     sourceImageMedium="{{ product.image.medium }}"
                     sourceImageSmall="{{ product.image.small }}"
                     description="{{ product.description }}"
+                    price="{{ product.price }}"
                 />
                 <twig:BaseProductDetailInformation
                     feature="{{ product.feature }}"
