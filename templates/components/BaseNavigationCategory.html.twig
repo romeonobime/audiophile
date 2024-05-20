@@ -1,7 +1,7 @@
 <nav class="wrapper">
     <menu class="flex flex-col gap-16 w-full sm:flex-row sm:gap-[10px] md:gap-8 ">
         <li class="w-full">
-            <a href="#" class="group">
+            <a class="group" href="{{ path("app_category", {category: "headphones"}) }}">
                 <twig:BaseCard color="light" class="relative h-[200px] mt-16">
                     <div class="absolute bottom-5 w-full">
                         <div class="flex flex-col gap-4 items-center">
@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="w-full">
-            <a href="#" class="group">
+            <a class="group" href="{{ path("app_category", {category: "speakers"}) }}">
                 <twig:BaseCard color="light" class="relative h-[200px] mt-16">
                     <div class="absolute bottom-5 w-full">
                         <div class="flex flex-col gap-4 items-center">
@@ -41,7 +41,7 @@
             </a>
         </li>
         <li class="w-full">
-            <a href="#" class="group">
+            <a class="group" href="{{ path("app_category", {category: "earphones"}) }}">
                 <twig:BaseCard color="light" class="relative h-[200px] mt-16">
                     <div class="absolute bottom-5 w-full">
                         <div class="flex flex-col gap-4 items-center">

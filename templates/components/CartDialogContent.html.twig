@@ -24,7 +24,13 @@
 						<twig:BaseCardDescription class="uppercase">Total</twig:BaseCardDescription>
 						<p class="text-[18px] font-bold">$ 5,396</p>
 					</div>
-					<twig:BaseButton class="w-full h-[48px]">Checkout</twig:BaseButton>
+					<twig:BaseLink
+						theme="primary"
+						class="w-full h-12"
+						href="{{ path("app_checkout") }}"
+					>
+						Checkout
+					</twig:BaseLink>
 				</div>
 			</twig:BaseCard>
 		</div>
