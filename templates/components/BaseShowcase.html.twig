@@ -22,7 +22,13 @@
                                 Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                             </twig:BaseCardDescription>
                         </div>
-                        <twig:BaseButton size="small" theme="darkest">See Product</twig:BaseButton>
+                        <twig:BaseLink
+                            href="{{ path("app_detail", {slug: "zx9-speaker"}) }}"
+                            theme="darkest"
+                            size="small"
+                        >
+                            See product
+                        </twig:BaseLink>
                     </div>
                 </div>
             </twig:BaseCard>
@@ -41,7 +47,13 @@
                     <twig:BaseCardTitle size="small">
                         ZX7 Speaker
                     </twig:BaseCardTitle>
-                    <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
+                    <twig:BaseLink
+                        href="{{ path("app_detail", {slug: "zx7-speaker"}) }}"
+                        theme="outline"
+                        size="small"
+                    >
+                        See product
+                    </twig:BaseLink>
                 </div>
             </twig:BaseCard>
         </li>
@@ -60,7 +72,13 @@
                         <twig:BaseCardTitle size="small">
                             YX1 Earphones
                         </twig:BaseCardTitle>
-                        <twig:BaseButton size="small" theme="outline">See Product</twig:BaseButton>
+                        <twig:BaseLink
+                            href="{{ path("app_detail", {slug: "yx1-earphones"}) }}"
+                            theme="outline"
+                            size="small"
+                        >
+                            See product
+                        </twig:BaseLink>
                     </div>
                 </twig:BaseCard>
             </article>

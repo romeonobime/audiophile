@@ -36,7 +36,13 @@
 					{{ description }}
 				</twig:BaseCardDescription>
 			</div>
-            <twig:BaseButton size="small">See Product</twig:BaseButton>
+            <twig:BaseLink
+				theme="primary"
+				size="small"
+				href="{{ path("app_detail", {slug}) }}"
+			>
+				See Product
+			</twig:BaseLink>
 		</div>
 	</article>
 </li>

@@ -1,16 +1,16 @@
 <nav>
     <twig:BaseNavigationPrimaryMenu>
         <li>
-            <twig:BaseLink href="#">Home</twig:BaseLink>
+            <twig:BaseLink href="{{ path("app_home") }}">Home</twig:BaseLink>
         </li>
         <li>
-            <twig:BaseLink href="#">Headphones</twig:BaseLink>
+            <twig:BaseLink href="{{ path("app_category", {category: "headphones"}) }}">Headphones</twig:BaseLink>
         </li>
         <li>
-            <twig:BaseLink href="#">Speakers</twig:BaseLink>
+            <twig:BaseLink href="{{ path("app_category", {category: "speakers"}) }}">Speakers</twig:BaseLink>
         </li>
         <li>
-            <twig:BaseLink href="#">Earphones</twig:BaseLink>
+            <twig:BaseLink href="{{ path("app_category", {category: "earphones"}) }}">Earphones</twig:BaseLink>
         </li>
     </twig:BaseNavigationPrimaryMenu>
 </nav>
