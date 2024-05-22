@@ -2,7 +2,7 @@
     key = 0,
     name = "",
     price = 0,
-    quantity = 0
+    quantity = 0,
 %}
 
 <li>
@@ -25,6 +25,10 @@
                 </p>
             </div>
         </div>
-        <twig:CartProductListItemCounter quantity="{{ quantity }}" key="{{ key }}" />
+        {% if app.request.attributes.get('_route') == "app_checkout" %}
+            <twig:CartProductListItemCounter quantity="{{ quantity }}" key="{{ key }}" isReadOnly/>
+        {% else %}
+            <twig:CartProductListItemCounter quantity="{{ quantity }}" key="{{ key }}"/>
+        {% endif %}
     </article>
 </li>

@@ -1,8 +1,41 @@
-<twig:BaseCard color="lightest" class="flex flex-col gap-8 px-7 py-8 w-full h-fit md:max-w-[350px]">
-	<header>
-		<twig:BaseCardTitle size="xsmall">Summary</twig:BaseCardTitle>
-	</header>
-	<twig:SummaryProductList/>
-    <twig:CheckoutSummaryCost />
-    <twig:ConfirmOrderDialog />
+<twig:BaseCard color="lightest" class="w-full h-fit md:max-w-[350px]">
+	<twig:CartContainer>
+		<div class="flex flex-col gap-8 px-7 py-8">
+			<header>
+				<twig:BaseCardTitle size="xsmall">Summary</twig:BaseCardTitle>
+			</header>
+			<twig:CartProductList
+				cartItems="{{ cart.cartItems }}"
+				isReadOnly
+			/>
+			<ul class="flex flex-col gap-2">
+				<li>
+					<twig:CartRow
+						name="Total"
+						price="{{ cart.totalCost }}"
+					/>
+				</li>
+				<li>
+					<twig:CartRow
+						name="Shipping"
+						price="{{ cart.shippingCost }}"
+					/>
+				</li>
+				<li>
+					<twig:CartRow
+						name="vat (included)"
+						price="{{ cart.vatIncludedCost }}"
+					/>
+				</li>
+				<li class="mt-4">
+					<twig:CartRow
+						name="Grand total"
+						price="{{ cart.grandTotalCost }}"
+						isPrimary
+					/>
+				</li>
+			</ul>
+			<twig:ConfirmOrderDialog />
+		</div>
+	</twig:CartContainer>
 </twig:BaseCard>

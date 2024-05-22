@@ -2,7 +2,7 @@
 
 <div>
 	{% if isReadOnly %}
-		<p class="font-bold body text-neutral-darkest/50">x{{ this.quantity }}</p>
+		<p class="font-bold body text-neutral-darkest/50">x{{ quantity }}</p>
 	{% else %}
 		<twig:BaseCounter size="small" value="{{ quantity }}" key="{{ key }}"/>
 	{% endif %}

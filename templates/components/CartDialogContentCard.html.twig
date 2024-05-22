@@ -1,0 +1,28 @@
+<twig:CartContainer>
+    <div class="wrapper sm:flex sm:justify-end">
+        <twig:BaseCard color="lightest" class="flex flex-col gap-8 px-7 py-8 w-full sm:max-w-[377px]">
+                <header class="flex justify-between">
+                    <twig:BaseCardTitle size="xsmall">Cart ({{ cart.cartItems|length }})</twig:BaseCardTitle>
+                    {% if app.request.attributes.get('_route') != "app_checkout" %}
+                        <twig:BaseButton theme="text" data-action="live#action" data-live-action-param="deleteAllCartItem">Remove all</twig:BaseButton>
+                    {% endif %}
+                </header>
+                {% if cart.cartItems|length > 0 %}
+                    <twig:CartProductList cartItems="{{ cart.cartItems }}" />
+                    <twig:CartRow
+                        name="Total"
+                        price="{{ cart.totalCost }}"
+                    />
+                    <div class="flex flex-col gap-6">
+                        <twig:BaseLink theme="primary" class="w-full h-12" href="{{ path("app_checkout") }}">
+                            Checkout
+                        </twig:BaseLink>
+                    </div>
+                {% else %}
+                    <div>
+                        Your Cart is empty, fill it so you can see your items and go to the checkout page
+                    </div>
+                {% endif %}
+        </twig:BaseCard>
+    </div>
+</twig:CartContainer>

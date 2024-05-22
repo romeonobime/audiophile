@@ -1,3 +1,5 @@
+{% props cartItems = [], isReadOnly = false %}
+
 <ul class="flex flex-col gap-6">
 	{% for cartItem in cartItems %}
 		<twig:CartProductListItem

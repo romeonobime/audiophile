@@ -12,27 +12,6 @@
 				</twig:BaseDialogTrigger>
 			</twig:block>
 		</twig:BaseHeaderMenu>
-		<div class="wrapper sm:flex sm:justify-end">
-			<twig:BaseCard color="lightest" class="flex flex-col gap-8 px-7 py-8 w-full sm:max-w-[377px]">
-				<header class="flex justify-between">
-					<twig:BaseCardTitle size="xsmall">Cart</twig:BaseCardTitle>
-					<twig:BaseButton theme="text" data-action="live#action" data-live-action-param="deleteAllCartItem">Remove all</twig:BaseButton>
-				</header>
-				<twig:CartProductList/>
-				<div class="flex flex-col gap-6">
-					<div class="flex justify-between">
-						<twig:BaseCardDescription class="uppercase">Total</twig:BaseCardDescription>
-						<p class="text-[18px] font-bold">$ 5,396</p>
-					</div>
-					<twig:BaseLink
-						theme="primary"
-						class="w-full h-12"
-						href="{{ path("app_checkout") }}"
-					>
-						Checkout
-					</twig:BaseLink>
-				</div>
-			</twig:BaseCard>
-		</div>
+		<twig:CartDialogContentCard />
 	</div>
 </twig:BaseDialogContent>
