@@ -5,9 +5,14 @@ export default class extends Controller {
     return ["dialog"];
   }
 
+  initialize() {
+    this.dialogTarget.close();
+  }
+
   open() {
     this.dialogTarget.showModal();
   }
+
   close() {
     this.dialogTarget.close();
   }

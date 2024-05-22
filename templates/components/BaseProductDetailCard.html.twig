@@ -36,7 +36,7 @@
             <twig:BaseCardDescription>
                 {{ description }}
             </twig:BaseCardDescription>
-            <span class="heading-xsmall text-neutral-darkest">$ {{ price }}</span>
+            <span class="heading-xsmall text-neutral-darkest">$ {{ price|number_format }}</span>
         </div>
         <twig:CartProductListAdd productId="{{ productId }}"/>
     </div>

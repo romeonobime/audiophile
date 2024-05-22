@@ -1,0 +1,10 @@
+{% props
+    name = "",
+    price = 0,
+    isPrimary = false,
+%}
+
+<div class="flex justify-between">
+	<twig:BaseCardDescription class="uppercase">{{ name }}</twig:BaseCardDescription>
+	<p class="text-[18px] font-bold {{ isPrimary ? "text-primary" : "text-neutral-darkest" }}">$ {{ price|number_format }}</p>
+</div>

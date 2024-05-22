@@ -313,6 +313,6 @@
         }
     },
     "twig/extra-bundle": {
-        "version": "v3.9.3"
+        "version": "v3.10.0"
     }
 }
